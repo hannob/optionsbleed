@@ -1,8 +1,9 @@
 optionsbleed
 ============
 
-This is a proof of concept code to test for the optionsbleed bug in
-Apache httpd (CVE-2017-9798).
+This is a proof of concept code to test for the
+[Optionsbleed](https://blog.fuzzing-project.org/60-Optionsbleed-HTTP-OPTIONS-method-can-leak-Apaches-server-memory.html)
+bug in Apache httpd (CVE-2017-9798).
 
 usage
 =====
