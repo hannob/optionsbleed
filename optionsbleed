@@ -35,7 +35,7 @@ def test_bleed(url, args):
 parser = argparse.ArgumentParser(
          description='Check for the Optionsbleed vulnerability (CVE-2017-9798).',
          epilog="Tests server for Optionsbleed bug and other bugs in the allow header.\n\n"
-         "Autmatically checks http://, https://, http://www. and https://www. -\n"
+         "Automatically checks http://, https://, http://www. and https://www. -\n"
          "except if you pass -u/--url (which means by default we check 40 times.)\n\n"
          "Explanation of results:\n"
          "[bleed] corrupted header found, vulnerable\n"
