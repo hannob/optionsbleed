@@ -24,7 +24,7 @@ optional arguments:
 
 Tests server for Optionsbleed bug and other bugs in the allow header.
 
-Autmatically checks http://, https://, http://www. and https://www. -
+Automatically checks http://, https://, http://www. and https://www. -
 except if you pass -u/--url (which means by default we check 40 times.)
 </pre>
 
