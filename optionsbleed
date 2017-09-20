@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 # Optionsbleed proof of concept test
 # by Hanno Böck
