@@ -5,6 +5,13 @@ This is a proof of concept code to test for the
 [Optionsbleed](https://blog.fuzzing-project.org/60-Optionsbleed-HTTP-OPTIONS-method-can-leak-Apaches-server-memory.html)
 bug in Apache httpd (CVE-2017-9798).
 
+Please consider using the tool [Snallygaster](https://github.com/hannob/snallygaster)
+instead, it has a check for optionsbleed included:
+
+```
+snallygaster -t optionsbleed [host]
+```
+
 usage
 =====
 
