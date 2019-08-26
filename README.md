@@ -39,7 +39,9 @@ output explanation
 ==================
 
 The script outputs the returned Allow header and prefixes it with
-an explanation what is wrong with it.
+an explanation what is wrong with it. By default there will be no
+output if the server is not vulnerable, this can be changed with the
+-a/--all parameter.
 
 [bleed]
 -------
