@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+
+import http.server
+import argparse
+
+
+class Handler(http.server.SimpleHTTPRequestHandler):
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header("Allow", data)
+        self.end_headers()
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-m", "--multihead", action="store_true",
+                    help="https://bz.apache.org/bugzilla/show_bug.cgi?id=61207")
+parser.add_argument("-l", "--launchpad", action="store_true",
+                    help="https://bugs.launchpad.net/launchpad/+bug/1717682")
+parser.add_argument("-r", "--redos", action="store_true")
+args = parser.parse_args()
+
+h = http.server.HTTPServer(('localhost', 8000), Handler)
+
+data = "GET,HEAD,OPTIONS,=write HTTP/1.0,HEAD,,HEAD,POST,,HEAD,TRACE"
+if args.multihead:
+    data = "POST,OPTIONS,HEAD,HEAD,GET,HEAD"
+elif args.launchpad:
+    data = "GET HEAD POST"
+elif args.redos:
+    data = 'a' + (' ' * 2000000)
+
+h.serve_forever()
